@@ -32,6 +32,7 @@
 			<result>../sources/admin/styles/{1}.js</result>
 		</action>
 	</package>
+
 	<package name="*.loginAdminJs" namespace="/sources/admin/vendor/bootstrap/js" extends="struts-default">
 		<action name="{1}">
 			<result>../sources/admin/vedor/bootstrap/js/{1}.js</result>
@@ -49,6 +50,9 @@
 		
 		<action name="home">
 			<result>WEB-INF/pages/user/home.jsp</result>
+		</action>
+			<action name="index">
+			<result>WEB-INF/pages/user/index.jsp</result>
 		</action>
 	</package>
 	
