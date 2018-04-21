@@ -20,7 +20,6 @@
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  <!-- trung code -->
   <%
   /* khong back duoc */
  	 response.setHeader("Cache-Control", "no-cache,no-store,must-rivalidate");

@@ -23,30 +23,28 @@
       <div class="card-header">Login Admin</div>
       <div class="card-body">
         <s:form action="login1" method="post">
-          <div class="form-group">
+          
+          
+        </s:form>
+       
+        <s:form action="login1" method = "post">
+        <div class="form-group">
             <s:label for="exampleInputEmail1">Email address</s:label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input name="username" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
           </div>
-          <div class="form-group">
+		<div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
           </div>
+			<s:submit class="btn btn-primary btn-block" label="Login" align="center" value="Login"/>
+		</s:form>
+		
           <div class="form-group">
             <div class="form-check">
               <label class="form-check-label">
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
             </div>
           </div>
-          <!-- <a class="btn btn-primary btn-block" href="index.html">Login</a> -->
-          <s:submit class="btn btn-primary btn-block" label="Login" align="center"/>
-        </s:form>
-       
-        <s:form action="login1" method = "post">
-		<s:textfield name="username" label="Username" />
-		<s:password name="password" label="Password" />
-		<s:submit value="Login" />
-		</s:form>
-		
         <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
           <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
