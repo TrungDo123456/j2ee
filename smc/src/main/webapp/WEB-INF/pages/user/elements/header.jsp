@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,8 +54,10 @@
 							</div>
 							<div class="top_bar_user">
 								<div class="user_icon"><img src="sources/images/user.svg" alt=""></div>
-								<div><a href="#">Register</a></div>
-								<div><a href="#">Sign in</a></div>
+								<div><s:a action="register_page">Register</s:a></div>
+								<div>
+								<s:a action = "signin">Sign In</s:a>
+								</div>
 							</div>
 						</div>
 					</div>

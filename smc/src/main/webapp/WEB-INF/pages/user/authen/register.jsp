@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>Sign In</title>
   <!-- Bootstrap core CSS-->
   <link href="./sources/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -20,31 +20,34 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Login User</div>
+      <div class="card-header"><h1>Register</h1></div>
       <div class="card-body">
        
-        <s:form action="login_user" method = "post">
+        <s:form action="register_action" method="post">
         <div class="form-group">
-            <s:label for="exampleInputEmail1">Email address</s:label>
-            <input name="username" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
-          </div>
+            <input name="customer.username" class="form-control" placeholder="Name">
+         </div>
+         <div class="form-group">
+            <input name="customer.email" class="form-control"  type="email" aria-describedby="emailHelp" placeholder="Email">
+         </div>
 		<div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
-          </div>
-			<s:submit class="btn btn-primary btn-block" label="Login" align="center" value="Login"/>
+            <input name="customer.password" class="form-control"  type="password" placeholder="Password">
+         </div>
+         <div class="form-group">
+            <input name="customer.password" class="form-control" type="password" placeholder="Password confirm">
+         </div>
+         <div class="form-group">
+            <input name="customer.age" class="form-control" placeholder="Age">
+         </div>
+         <div class="form-group">
+            <input name="customer.address" class="form-control"  placeholder="Address">
+         </div>
+         <div class="form-group">
+            <input name="customer.phone" class="form-control" placeholder="Phone">
+         </div>
+         	<s:textfield label="name" name="customer.username"></s:textfield>
+			<s:submit class="btn btn-primary btn-block" label="Sign up" align="center" value="Sign up"/>
 		</s:form>
-		
-          <div class="form-group">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember Password</label>
-            </div>
-          </div>
-        <div class="text-center">
-          <s:a action="register_page">Register an Account</s:a>
-          <s:a action="forgot_password">Forgot Password?</s:a>
-        </div>
       </div>
     </div>
   </div>

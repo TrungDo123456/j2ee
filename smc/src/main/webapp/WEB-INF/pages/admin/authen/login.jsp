@@ -22,10 +22,6 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login Admin</div>
       <div class="card-body">
-        <s:form action="login1" method="post">
-          
-          
-        </s:form>
        
         <s:form action="login1" method = "post">
         <div class="form-group">

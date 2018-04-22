@@ -5,8 +5,7 @@
  
 <struts>
 	<constant name="struts.devMode" value="true" />
-	
-	
+
 	<!-- Cấu hình css -->
      <package name="*.css" namespace="/sources/styles" extends="struts-default">
 		<action name="{1}">
@@ -39,22 +38,41 @@
 		</action>
 	</package>
 	<!-- ***************************************************************************************************
+	
+	
+	
+	
 		Cấu hình trang: 	SMC
 	 	 ***************************************************************************************************-->
-	<package name="default" namespace="" extends="struts-default">
+	<package name="default" extends="struts-default">
+	
+		<action name="user_infor">
+			<result>WEB-INF/pages/user/user_infor.jsp</result>
+		</action>
+        
+		<action name="signin">
+			<result>WEB-INF/pages/user/authen/login.jsp</result>
+		</action>
 		
-		<action name="login" class="uit.edu.vn.action.LoginAction" method = "execute" >
-            <result name ="success" >WEB-INF/pages/user/authen/login.jsp</result>
-            <result name ="error" >WEB-INF/pages/user/authen/error.jsp</result>
-        </action>
+		<action name="register_page">
+			<result>WEB-INF/pages/user/authen/register.jsp</result>
+		</action>
 		
 		<action name="home">
-			<result>WEB-INF/pages/user/home.jsp</result>
-		</action>
-			<action name="index">
 			<result>WEB-INF/pages/user/index.jsp</result>
 		</action>
+        
+		<action name="login_user" class="uit.edu.vn.action.ValidatedLoginAction" method = "execute" >
+            <result name ="success" type="redirect">home</result>
+        </action>
+        
+        <action name="register_action" class="uit.edu.vn.action.RegisterAction" method = "execute" >
+            <result name ="success" type="redirect" >user_infor</result>
+        </action>
+       
 	</package>
+	
+	
 	
 	<!-- ***************************************************************************************************
 		Cấu hình trang: 	CMS AMDIN

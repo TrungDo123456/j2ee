@@ -1,7 +1,9 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>OneTech</title>
+<title>Trang chu</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -18,7 +20,6 @@
 </head>
 
 <body>
-
 <div class="super_container">
 	
 	<!-- Header -->
