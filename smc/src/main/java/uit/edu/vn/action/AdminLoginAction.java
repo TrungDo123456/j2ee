@@ -34,7 +34,7 @@ public class AdminLoginAction extends ActionSupport {
 		if (this.username.equals("admin@smc.com") && this.password.equals("admin")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", this.username);
-			session.setMaxInactiveInterval(30 * 60);// tinh bang giay 30 phut
+			session.setMaxInactiveInterval( 1 * 60);// tinh bang giay 30 phut
 			return "success";
 		} else {
 			return "error";

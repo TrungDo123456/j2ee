@@ -56,7 +56,18 @@
 								<div class="user_icon"><img src="sources/images/user.svg" alt=""></div>
 								<div><s:a action="register_page">Register</s:a></div>
 								<div>
-								<s:a action = "signin">Sign In</s:a>
+								<%
+								  /* khong back duoc */
+								 	response.setHeader("Cache-Control", "no-cache,no-store,must-rivalidate");
+									response.setHeader("Pragma", "no-cache");
+									response.setHeader("Expires","0");  
+									  if(session.getAttribute("user") != null){
+											%><s:a action = "logout_user">Sign out</s:a><%
+										}
+									  else
+										  %><s:a action = "login_page">Sign in</s:a><%
+								 %>
+								
 								</div>
 							</div>
 						</div>

@@ -18,6 +18,15 @@
   <link href="./sources/admin/css/sb-admin.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
+<%
+  /* khong back duoc */
+ 	response.setHeader("Cache-Control", "no-cache,no-store,must-rivalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires","0");  
+	  if(session.getAttribute("user") != null){
+			response.sendRedirect("home");
+		}
+ %>
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header"><h1>Register</h1></div>
@@ -25,7 +34,7 @@
        
         <s:form action="register_action" method="post">
         <div class="form-group">
-            <input name="customer.username" class="form-control" placeholder="Name">
+            <input name="customer.name" class="form-control" placeholder="Name">
          </div>
          <div class="form-group">
             <input name="customer.email" class="form-control"  type="email" aria-describedby="emailHelp" placeholder="Email">
@@ -34,7 +43,7 @@
             <input name="customer.password" class="form-control"  type="password" placeholder="Password">
          </div>
          <div class="form-group">
-            <input name="customer.password" class="form-control" type="password" placeholder="Password confirm">
+            <input class="form-control" type="password" placeholder="Password confirm">
          </div>
          <div class="form-group">
             <input name="customer.age" class="form-control" placeholder="Age">
@@ -45,9 +54,9 @@
          <div class="form-group">
             <input name="customer.phone" class="form-control" placeholder="Phone">
          </div>
-         	<s:textfield label="name" name="customer.username"></s:textfield>
-			<s:submit class="btn btn-primary btn-block" label="Sign up" align="center" value="Sign up"/>
+         <s:submit class="btn btn-primary btn-block" label="Sign up" align="center" value="Sign up"/>
 		</s:form>
+		
       </div>
     </div>
   </div>

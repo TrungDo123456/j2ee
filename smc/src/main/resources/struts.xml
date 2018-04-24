@@ -50,24 +50,38 @@
 			<result>WEB-INF/pages/user/user_infor.jsp</result>
 		</action>
         
-		<action name="signin">
+		<action name="login_page">
 			<result>WEB-INF/pages/user/authen/login.jsp</result>
 		</action>
 		
 		<action name="register_page">
 			<result>WEB-INF/pages/user/authen/register.jsp</result>
 		</action>
+		<action name="changepassword_page">
+			<result>WEB-INF/pages/user/authen/changePassword.jsp</result>
+		</action>
 		
 		<action name="home">
 			<result>WEB-INF/pages/user/index.jsp</result>
 		</action>
         
-		<action name="login_user" class="uit.edu.vn.action.ValidatedLoginAction" method = "execute" >
-            <result name ="success" type="redirect">home</result>
+		<action name="login_user" class="uit.edu.vn.action.ValidatedLoginAction" method = "login" >
+            <result name ="success">WEB-INF/pages/user/index.jsp</result>
+            <result name="input" type="redirect">login_page</result>
         </action>
         
+        <action name="logout_user" class="uit.edu.vn.action.ValidatedLoginAction" method = "logout" >
+            <result name ="success" type="redirect">home</result>
+        </action>
+ 
         <action name="register_action" class="uit.edu.vn.action.RegisterAction" method = "execute" >
-            <result name ="success" type="redirect" >user_infor</result>
+
+            <result name ="success">WEB-INF/pages/user/user_infor.jsp</result> 
+        </action>
+        
+        <action name="forgot_password" class="uit.edu.vn.action.ForgotPasswordAction" method = "execute" >
+            <result name="success" type="redirect">home</result>
+            <result name="error" type="redirect">changepassword_page</result>
         </action>
        
 	</package>
